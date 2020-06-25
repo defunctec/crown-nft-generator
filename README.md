@@ -1,4 +1,4 @@
-# crown-nft-generator
+# Crown-NFT-Generator
 A simple PHP based tool to create NFT's on the Crown blockchain
 
 ## Installation guide
