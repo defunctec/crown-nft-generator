@@ -6,6 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/wp-includes/wp-db.php';
 global $wpdb;
 // Check if form entry match
 if(isset($_POST['Username']) && isset($_POST['Email']) && isset($_POST['NFTName']) && isset($_POST['NFTID']) && isset($_POST['NFTOwneraddress']) && isset($_POST['NFTMetadataAdminAddress']) && isset($_POST['NFTMetadata'])){
+    // If checks pass, then
     $username = $_POST['Username'];
     $email = $_POST['Email'];
     $nftname = $_POST['NFTName'];
@@ -15,7 +16,7 @@ if(isset($_POST['Username']) && isset($_POST['Email']) && isset($_POST['NFTName'
     $NFTMetadata = $_POST['NFTMetadata'];
     // Call to private file
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,"https://YOURWEBSITE/crown_de/crown.php");
+    curl_setopt($ch, CURLOPT_URL,"https://WEBSITEURL/crown_de/crown.php");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS,$_POST);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -29,13 +30,13 @@ if(isset($_POST['Username']) && isset($_POST['Email']) && isset($_POST['NFTName'
         $insert=$wpdb->insert(
             $table_name,
             array(
-                'Username' => $username,
-                'Email' => $email,
-                'NFTName' => $nftname,
+                'Username'=> $username,
+                'Email'=> $email,
+                'NFTName'=> $nftname,
                 'NFTID'=> $nftid,
                 'NFTOwneraddress'=> $nftownaddress,
                 'NFTMetadataAdminAddress'=> $adminaddress,
-                'nftToken' => $nft_Token,
+                'nftToken'=> $nft_Token,
                 'NFTMetadata'=> $NFTMetadata));
         // Confirm the NFT has been created successfully 
         echo $nft_Token."<br>Congratulations, NFT creation was a success!";

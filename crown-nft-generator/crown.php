@@ -60,15 +60,15 @@ echo'<div class="container">
 			<form id="form" action="../wp-content/plugins/crown-nft-generator/ajaxform.php" method="post" name="crown-form">
 				<div class="form-group" style="display:none">
 					<label for="username">Username<span style="color:red;font-size: 15px;">*</span></label>
-					<input type="text" class="form-control" id="Username" value="YOURUSERNAME" name="Username" readonly required>
+					<input type="text" class="form-control" id="Username" value="USERNAME" name="Username" readonly required>
 				</div>
 				<div class="form-group" style="display:none">
 					<label for="email">Email Address<span style="color:red;font-size: 15px;">*</span></label>
-					<input type="email" class="form-control" name="Email" value="YOUREMAIL" id="Email" readonly required">
+					<input type="email" class="form-control" name="Email" value="USEREMAIL" id="Email" readonly required">
 				</div>
 				<div class="form-group" style="display:none">
 					<label for="nftname">NFT Protocol<span style="color:red;font-size: 15px;">*</span></label>
-					<input type="text" class="form-control" name="NFTName" value="YOURPROTOCOL" id="NFTName" readonly required>
+					<input type="text" class="form-control" name="NFTName" value="WEBSITE-OWENER-PROTOCOL" id="NFTName" readonly required>
 				</div>
 				<div class="form-group">
 					<label for="nftid">Enter your document, image or text hash here<span style="color:red;font-size: 15px;">*</span></label>
@@ -76,11 +76,11 @@ echo'<div class="container">
 				</div>
 				<div class="form-group">
 					<label for="nftownaddress">Owners Address (Use the address provided if you do not own a Crown address)<span style="color:red;font-size: 15px;">*</span></label>
-					<input type="text" class="form-control" name="NFTOwneraddress" value="ACROWNADDRESS" placeholder="Your Crown Address"  id="NFTOwneraddress" required>
+					<input type="text" class="form-control" name="NFTOwneraddress" value="CROWNADDRESS" placeholder="Your Crown Address"  id="NFTOwneraddress" required>
 				</div>
 				<div class="form-group">
 					<label for="adminaddress">Admin Address (Use the address provided if you do not own a Crown address)<span style="color:red;font-size: 15px;">*</span></label>
-					<input type="text" class="form-control" name="NFTMetadataAdminAddress" value="ACROWNADDRESS" placeholder="MetadataAdminAddr" id="NFTMetadataAdminAddress" required>
+					<input type="text" class="form-control" name="NFTMetadataAdminAddress" value="CROWNADDRESS" placeholder="MetadataAdminAddr" id="NFTMetadataAdminAddress" required>
 				</div>
 				<div class="form-group">
 					<label for="NFTMetadata">Enter a link to your image or text file here. You can use upto 255 characters <span style="color:red;font-size: 15px;">*</span></label>
@@ -92,7 +92,7 @@ echo'<div class="container">
 				</div>
 			</form>
 			<span class="hidden"></span>
-			<img src="" id="loading-img" style="display:none">
+			<img src="" id="loading-img">
 			<div class="response_msg"></div>
 			</div>
 		</div>

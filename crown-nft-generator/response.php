@@ -14,17 +14,15 @@ $plugin_url_cr = plugin_dir_url($plugin_dir);
     body {
             font-size: 140%;
         }
-
         table.dataTable th,
         table.dataTable td {
             white-space: nowrap;
         }
-        	
 div.container { max-width: 1200px }
 </style>
-<div class="container table-responsive">
+<div class=" container table-responsive">
 <div class="conatiner btn-entry">
-	<button type="button" class="btn btn-primary"><a href="https://crwmixer.com/test">Create New Entry</a></button>
+	<button type="button" class="btn btn-primary"><a href="https://WEBSITEURL/">Create New Entry</a></button>
 </div>
 <table id="data_table" class="table table-bordered table-striped"  style="width:100%">
 	<thead>
@@ -34,38 +32,45 @@ div.container { max-width: 1200px }
 			<th>Email</th>
 			<th>NFTName</th>
 			<th>NFTID</th>
-            <th>nftToken</th> 
 			<th>NFTOwneraddress</th>
 			<th>NFTMetadataAdminAddress</th>
+            <th>nftToken</th> 
 			<th>NFTMetadata</th> 
             <th>Date</th>
 		</tr>
 	</thead>
 <?php
+//	print_r($_GET);
 $result = $wpdb->get_results('SELECT * FROM wp_crownform ORDER BY created DESC'
 );
+
 ?>
 <tbody>
 <?php
 foreach($result as $row){   
 //print_r($row);
 ?>
+
 	<tr>
 		<td><?php echo $row->id;?></td>
 		<td><?php echo $row->Username;?></td>
 		<td><?php echo $row->Email;?></td>
 		<td><?php echo $row->NFTName;?></td>
 		<td><?php echo $row->NFTID;?></td>
-		<td><?php echo $row->nftToken;?></td>
 		<td><?php echo $row->NFTOwneraddress;?></td>
 		<td><?php echo $row->NFTMetadataAdminAddress;?></td>
+		<td><?php echo $row->nftToken;?></td>
 		<td><?php echo $row->NFTMetadata;?></td>
 		<td><?php echo $row->created?></td>
 	</tr>
+
 <?php
+
 }
 ?>
+
 </tbody>
+
 </table>
 </div>
 <script type='text/javascript' src='<?php echo $plugin_url_cr; ?>crown-nft-generator/js/jquery.min.js?ver=4.9.8'></script>
@@ -78,6 +83,7 @@ foreach($result as $row){
     $(document).ready(function(){
          $('#data_table').DataTable( {
              responsive: true
+
                 });
     })
 </script>
