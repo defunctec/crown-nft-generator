@@ -15,11 +15,11 @@ You need a existing protocol to create tokens. If you're not using the protocol 
 
 Create a new protocol, editing the appropriate details
 ```
-crown-cli nftproto register "Proto-short-name(abc)" "Proto-long-name" "YOUR-Crown-address" 1 "application/json" "" true true
+crown-cli nftproto register "Proto-short-name(abc)" "Proto-long-name" "YOUR-Crown-address" 3 "application/json" "" true true
 ```
 eg
 ```
-crown-cli nftproto register "abc" "alphabet" "CRWKKM8kYa6u5oKAtyjQ98uQqzfMXxD6g284" 1 "application/json" "" true true
+crown-cli nftproto register "abc" "alphabet" "CRWKKM8kYa6u5oKAtyjQ98uQqzfMXxD6g284" 3 "application/json" "" true true
 ```
 
 In the VPS edit /root/.crown/crown.conf to include your RPC details
